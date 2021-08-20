@@ -1,6 +1,11 @@
 name: Hello team
 description: Say hello to team
 
+inputs:
+  leader:
+    description: Team leader
+    required: false
+
 runs:
   using: "docker"
   image: "Dockerfile" 
