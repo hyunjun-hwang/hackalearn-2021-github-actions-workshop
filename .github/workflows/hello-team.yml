@@ -1,22 +1,17 @@
-# This is a basic workflow to help you get started with Actions
-# CI라는 이름의 워크 플로우
+
 name: Hello Team
 
-# 어떤 이벤트에 의해 트리거가되는지 명시
 on: push
 
-
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+  
   build:
-    # 우분투 최신 버전에서 실행중
+    
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    
     steps:
-      # 깃헙 액션이 돌아가기위해서 체크아웃하는과정이 필요함
+      
       - uses: actions/checkout@v2
       
       - name: Hello Team
