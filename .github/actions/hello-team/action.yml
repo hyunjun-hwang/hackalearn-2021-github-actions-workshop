@@ -5,6 +5,10 @@ inputs:
   leader:
     description: Team leader
     required: false
+  
+  member:
+    description: Team leader
+    required: false
 
 runs:
   using: "docker"
