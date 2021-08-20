@@ -4,11 +4,6 @@ description: Jokes to team
 outputs:
   joke:
     description: Return joke to team from koke API
-    required: false
-  
-  member:
-    description: Team leader
-    required: false
 
 runs:
   using: "docker"
