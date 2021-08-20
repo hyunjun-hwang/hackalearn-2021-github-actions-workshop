@@ -1,28 +1,28 @@
 # This is a basic workflow to help you get started with Actions
-# CI라는 이름의 워크 플로우
+
 name: CI
 
-# 어떤 이벤트에 의해 트리거가되는지 명시
+# Controls when the workflow will run
 on:
-  # 메인 브런치에서 푸시가 됬을때 트리거가되고
+  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 
-  # 다른 이벤트를 통해 트리거하고싶을때 사용
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
-    # 우분투 최신 버전에서 실행중
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # 깃헙 액션이 돌아가기위해서 체크아웃하는과정이 필요함
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
